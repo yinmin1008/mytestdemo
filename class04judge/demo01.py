@@ -60,9 +60,105 @@ if 条件1：
 elif 条件2：
     执行的事情
 ...
-eise:
+else:
     执行的事情
 '''
+# grade = int(input('请输入成绩：'))
+
+# if grade >= 90:
+#     print('你是厉害的')
+# elif grade>=80:
+#     print('你就是优秀的')
+# elif grade >=70:
+#     print('你就是中等的')
+# elif grade >60:
+#     print('你还需继续努力')
+# else:
+#     print('不及格')
+
+
+# if嵌套：在条件满足的时候再加条件
+# 格式：
+'''
+if 条件：
+    if 条件：
+        要执行的事情
+    else:
+        要执行的事情
+else:
+    要执行的事情
+'''
+
+# grade = int(input('请输入成绩：'))
+
+# if grade >60:
+#     if grade >90:
+#         print('你是优秀的')
+#     elif grade >80:
+#         print('你是中等的')
+#     else:
+#         print('你是及格的')
+# else:
+#     print('你是不及格的')
+
+
+# 循环：特定的一些事情重复执行
+# 两种格式：while  for  
+'''
+while格式：
+while 条件：
+    循环的内容
+'''
+
+# 第一个简单的while循环    打印5次hello world
+# i = 1
+# while i <= 5:
+#     print('hello world')
+#     i = i+1
+
+# 联系：0+1+2+3+。。。。+100
+
+# i=0
+# sum = 0
+# while i <= 100:
+    
+#     sum = sum+i
+#     i = i+1
+# print(sum)
+
+# 在循环中有break和continue
+# break 当某一个条件满足时，退出循环，不执行后面的代码
+# continue 当某一个条件满足时，退出循环，执行后面的代码,continue中要加逻辑
+
+# 如：打印1-10的数字，循环7时，就不打印，不打印3
+# i= 0
+# while i <=10:
+#     if i == 7:
+#         break
+#     i = i+1
+#     print(i)
+
+    
+# i= 0
+# while i <=10:
+#     if i == 3:
+#         i = i+1
+#         continue
+    
+#     print(i)
+#     i = i+1
+
+for i in range(10):
+    if i ==3:
+        continue
+    print(i)
+    
+
+
+
+
+
+
 
 
 
