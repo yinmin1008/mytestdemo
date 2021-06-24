@@ -138,7 +138,6 @@ while 条件：
 #     i = i+1
 #     print(i)
 
-    
 # i= 0
 # while i <=10:
 #     if i == 3:
@@ -148,24 +147,101 @@ while 条件：
 #     print(i)
 #     i = i+1
 
-for i in range(10):
-    if i ==3:
-        continue
-    print(i)
+# for i in range(10):
+#     if i ==3:
+#         continue
+#     print(i)
     
+# 嵌套循环：循环中加循环   while   for
+# 题目
+'''
+*
+**
+***
+****
+*****
+'''
+# 第一种：
+# for i in range(5):
+#     i = i + 1
+#     print('*'*i)
+# 第二种：
+# i = 0
+# while i <5:
+#     i = i + 1
+#     print('*'*i)
 
+# 嵌套循环
+# i = 0
+# while i <=5:
+#     j = 0
+#     while j < i:
+#         print('*',end='')
+#         j = j+1
+#     print('*')
+#     i = i+1
 
+# for i in range(5):
+#     for j in range(i):
+#         print('*',end='')
+#     print('*')
 
+# while后面加else
+'''
+while 条件：
+    循环语句
+else:
+    语句
+'''
 
+# i = 0
+# while i <=5:
+#     j = 0
+#     while j < i:
+#         print('*',end='')
+#         j = j+1
+#     print('*')
+#     i = i+1
+# else:
+#     print('循环结束，我就执行')
 
+# 如果循环终止了，就不会打印else
+# i = 1
+# while i <=5:
+#     if i == 3:
+#         i = i + 1
+#         break
+#     print(i)
+#     i = i + 1
+# else:
+#     print('循环终止，就不打印else语句')
 
+# for 循环
+# 集合包括：元组，列表，字典 range(开始值，结束值)左闭右开
+'''
+格式：
+for 变量名 in 集合：
+    循环体
+'''
+# 循环5次 hello world
+# for i in range(5):
+#     print('hello world')
 
+# list = ['a,','b','c']
+# for i in list:
+#     print(i)
 
+# tou = ('a,','b','c',[1,2,3])
+# for i in tou:
+#     print(i)
 
+# while循环不知道次数，for循环知道次数，集合
 
-
-
-
+# 题目：求和 1+2+3+....+100
+sum = 0
+for i in range(1,101):
+    sum = sum+i
+print(sum)
 
 
 
