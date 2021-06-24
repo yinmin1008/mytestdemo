@@ -87,6 +87,7 @@ list8 = [1,2,3,3]
 # print(list7+list8)
 # print(list7*2)
 
+
 # 其他操作
 list9 = [9,4,3,5,7]
 # 排序  升序：sort
