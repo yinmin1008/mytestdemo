@@ -85,7 +85,12 @@ def a(num1,num2,*,num3):
     print(num1+num2+num3)
 # a(1,2,num3=3)
 
-# 在参数前面带两个 **，可以传多个参数，参数是字典形式
+def a2(*args):
+    print(args)
+a =  (1,2,3)   
+a2(a)
+
+# 在参数前面带两个 **，可以传多个参数，参数是关键字传参，保存在字典中
 def a3(**kwargs):
     print(kwargs)
 # a3(name='掌声',age=20)
@@ -94,7 +99,10 @@ def a3(**kwargs):
 def a4(*args,**kwargs):
     print(args)
     print(kwargs)
-# a4(1,2,3,name='掌声',age=20)
+# 这是普通参数，args可以接受多个参数
+# a4(1,2,3,{'name': '秋水', 'age': 200})
+# 想要把1，2，3传给*args,{'name': '秋水', 'age': 200}传给**kwargs，**必须用关键字形式传参
+# a4(1,2,3,name='秋水',age=400)
 
 # 打印中加 *，是把数据解包，会按照一定的格式去解析数据，*是解析元组，**是解析字典
 def a5(*args,**kwargs):
@@ -102,7 +110,9 @@ def a5(*args,**kwargs):
     print(kwargs)
 a1 = (1,2,3)
 a2 = {'name': '秋水', 'age': 20}
-# a5(a1,a2)
+# * 和 **就是解包   *a1：1，2，3    **a2：name='秋水',age=420
+a5(*a1,**a2)
+a5(a1,a2)
 
 # 函数嵌套：函数中嵌套函数
 def test1():
@@ -125,7 +135,7 @@ def sum(a,b):
 
 # 匿名函数求和
 sum = lambda a,b:a+b
-print(sum(2,3))
+# print(sum(2,3))
 
 
 # 模块：就是py文件，想用另一模块中的方法，要先拿模块，再调用里面的方法
