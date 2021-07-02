@@ -69,14 +69,13 @@ res3 = person(name='小明')
 # 如果位置参数和关键字参数同在，方法函数定义时，要先写位置参数，再写默认参数
 def person(name,age=100):
     return '我是{},今年{}岁'.format(name,age)
-res4 = person(age=20,name='小明')
+res4 = person(name='小明')
 # print(res4)
 
 # 不定长参数：在定义的过程中不知道有多少个参数，设置成不定长度的参数
 # 不定长参数有两种写法： *   **
 # 在参数前面带一个 *，就是把参数放在元组里面
-def person(name,*args):
-    print(name)
+def person(*args):
     print(args)
 # person('徐州',90,'男')
 
@@ -85,10 +84,12 @@ def a(num1,num2,*,num3):
     print(num1+num2+num3)
 # a(1,2,num3=3)
 
-def a2(*args):
-    print(args)
-a =  (1,2,3)   
-a2(a)
+def a2(a,b,c):
+    print(a)
+    print(b)
+    print(c)
+d =  (1,2,3)
+# a2(*d)
 
 # 在参数前面带两个 **，可以传多个参数，参数是关键字传参，保存在字典中
 def a3(**kwargs):
@@ -109,10 +110,21 @@ def a5(*args,**kwargs):
     print(args)
     print(kwargs)
 a1 = (1,2,3)
-a2 = {'name': '秋水', 'age': 20}
+# a2 = {'name': '秋水', 'age': 20}
 # * 和 **就是解包   *a1：1，2，3    **a2：name='秋水',age=420
-a5(*a1,**a2)
-a5(a1,a2)
+# a5(*a1,**a2)
+# a5(a1,a2)
+
+def a6(a,b,c):
+    print(a)
+    print(b)
+    print(c)
+args = (1,2,3)
+# a6(*args)
+
+kwargs = {'a':'秋水','b':20,'c':'女'}
+# a = 秋水  b = 20   c = 女
+# a6(**kwargs)
 
 # 函数嵌套：函数中嵌套函数
 def test1():
