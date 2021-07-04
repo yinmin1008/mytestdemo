@@ -126,6 +126,7 @@ jack = Cat()
     __del__  : 对象从内存中销毁之前，会被调用方法
     __str__  : 返回对象的描述信息  print函数输出
 '''
+
 # class Cat:
 #     def __init__(self,name):
 #         self.name = name
